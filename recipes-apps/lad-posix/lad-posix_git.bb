@@ -7,6 +7,7 @@
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=9167f5e3f3c60eb2f0c457e6b991c725"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/files/patches:"
 SRC_URI = "git://github.com/ahmedramadan02/LAD_POSIX.git;protocol=https \
 	 file://0001-bug-fixing-in-main.c-and-little-refactoring.patch"
 
