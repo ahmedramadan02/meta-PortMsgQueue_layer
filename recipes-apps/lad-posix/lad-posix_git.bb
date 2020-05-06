@@ -15,18 +15,9 @@ SRCREV = "934a5c93b68837f042916f5b6886aa2fbb425a9e"
 
 S = "${WORKDIR}/git"
 
-inherit cmake update-rc.d
-
-# Specify any options you want to pass to cmake using EXTRA_OECMAKE:
-EXTRA_OECMAKE = ""
-INITSCRIPT_NAME = "lad-posix"
+inherit cmake
 
 do_install(){
 	install -d ${D}${bindir}
 	install -m 0755 lad-posix ${D}${bindir}
-	
-	install -d ${D}/etc/init.d
-	install -m 0755 lad-posix ${D}/etc/init.d
 }
-
-#FILES_${PN} += "/etc/init.d/*"
