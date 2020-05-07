@@ -1,0 +1,13 @@
+[Unit]
+Description=start lad-posix at startup using systemd
+Before=getty@tty1.service
+ConditionPathExists=/usr/bin/lad-posix
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/lad-posix
+StandardOutput=tty
+StandardError=tty
+
+[Install]
+WantedBy=getty.target
